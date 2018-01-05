@@ -77,12 +77,18 @@ function home(ev) {
 	getPage();
 }
 
+function details(ev) {
+	console.log(productList);
+}
+
 window.onload = function() {
 	productList = document.querySelector(".product_listing");
 	searchBar = document.querySelector("input[name='search']");
 	let flipkart=document.querySelector(".flip");
 	flipkart.addEventListener('click',home);
 	searchBar.addEventListener("keydown", search);
+
+	productList.addEventListener('click',details);
 	getPage();
 };
 
